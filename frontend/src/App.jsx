@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import Product from './components/Product.jsx'
+import ProductScreen from './screens/ProductScreen.jsx'
 import HomeScreen from './screens/HomeScreen.jsx'
 import { Route,Routes } from 'react-router-dom'
 function App() {
@@ -11,7 +13,7 @@ function App() {
         element={
           <>
             <Header />
-            <HomeScreen />
+            <Product />
             <Footer />
           </>
         }
