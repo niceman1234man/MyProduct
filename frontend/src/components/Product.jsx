@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import product from '../Product'
 
 function Product() {
   return (
@@ -12,7 +13,7 @@ function Product() {
         {
           
         product.map((product)=>(
-          <div className='flex flex-col items-center justify-center py-3 shadow-xl'>
+          <div className='flex flex-col items-center justify-center py-3 shadow-xl' key={product._id}>
            
             <Link to={`/product/${product._id}`}>
             <img src={product.image} alt={product.name} />
