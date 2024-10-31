@@ -7,19 +7,23 @@ import HomeScreen from './screens/HomeScreen.jsx'
 import { Route,Routes } from 'react-router-dom'
 function App() {
   return (
+    <>
+    <Header />
     <Routes>
       <Route 
         path='/' 
         element={
           <>
-            <Header />
+            
             <Product />
-            <Footer />
+            
           </>
         }
       />
       <Route path='/product/:id' element={<ProductScreen />} />
     </Routes>
+    <Footer />
+    </>
   );
 }
 
