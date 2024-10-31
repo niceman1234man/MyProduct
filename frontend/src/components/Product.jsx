@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import product from '../Product'
+import Rating from './Rating'
 
 function Product() {
   return (
@@ -21,6 +22,7 @@ function Product() {
             </Link>
             
             <p>${product.price}</p>
+            <Rating value={product.rate} text={`${product.numberView} Reviews`}/>
           </div>
           
         ))
