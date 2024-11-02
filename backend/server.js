@@ -10,7 +10,10 @@ app.use(cors());
 app.get('/api/product',(req,res)=>{
  res.json(products);
 })
-
+app.get('/api/product/:id',(req,res)=>{
+  const pro=products.find((p)=>p._id==req.params.id)
+  res.json(pro);
+})
 app.listen(port,()=>{
     console.log("server running");
 })
