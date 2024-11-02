@@ -2,7 +2,10 @@ import express from 'express';
 import products from './data/Product.js';
 import cors from 'cors'
 import dotenv from 'dotenv'
+import connectDB from './db/config.js';
+
 dotenv.config();
+connectDB();
 const app =express();
 const port=process.env.PORT ||5000;
 app.use(express.json());
